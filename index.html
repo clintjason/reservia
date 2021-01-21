@@ -2,14 +2,43 @@
 <html lang="en">
 <head>
     <meta name="author" content="Clint Jason Ngassa">
-    <meta name="description" content="Reservia - A demo mockup house rental html and sass intergration">
+    <meta name="description" content="Reservia - A demo mockup house rental html and scss intergration">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <script src="https://use.fontawesome.com/ab05e2770f.js"></script>
     <title>Reservia - Mockup into website</title>
+
+    <!-- Open Graph data for facebook-->
+
+    <meta property="og:title" content="Title Here"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://www.example.com/"/>
+    <meta property="og:image" content="http://example.com/image.jpg"/>
+    <meta property="og:description" content="Description Here"/>
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Title Here"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://www.example.com/"/>
+    <meta property="og:image" content="http://example.com/image.jpg"/>
+    <meta property="og:description" content="Description Here"/>
 </head>
 <body>
     <main>
-        <header></header>
+        <header>
+            <nav class="menu">
+                <img src="images/logo/Reservia.svg" class="logo"/>
+                <ul>
+                  <li><a href="#">Accommodations</a></li>
+                  <li><a href="#">Activities</a></li>
+                </ul>
+                <a href="#" id="signup"><b>Sign up</b></a>
+            </nav>              
+        </header>
         <section class="accomodations">
         </section>
         <section class="popular">
@@ -18,7 +47,22 @@
         </section>
     </main>
     <footer>
-
+        <div>
+            <h3>About</h3>
+            <p>Site Map</p>
+            <p>General Terms and Conditions</p>
+            <p>Data and Privacy</p>
+        </div>
+        <div>
+            <h3>Our Accomodations</h3>
+            <p>Quality Assessment</p>
+            <p>You have a hotel?</p>
+        </div>
+        <div>
+            <h3>Assistance</h3>
+            <p>Help Desk</p>
+            <p>Contact Us</p>
+        </div>
     </footer>
 </body>
 </html>

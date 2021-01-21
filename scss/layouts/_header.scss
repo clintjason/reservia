@@ -1,0 +1,41 @@
+header {
+    a{
+        text-decoration: none;
+        color: $site-color;
+    }
+    nav {
+        width: 100%;
+
+        ul {
+            list-style-type: none;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 10px;
+            /* border-bottom: 3px solid $line-color; */
+            margin-left: -15px;
+
+            li {
+                display: inline-block;
+                width: 50%;
+                text-align: center;
+                padding-bottom: 10px;
+                border-bottom: 3px solid $line-color;
+                transition: border-bottom 0.5s, color 0.5s;
+                transition-timing-function: linear;
+                &:hover {
+                    a {
+                        color: $site-blue;
+                    }
+                    border-bottom: 3px solid $site-blue;
+                }
+            }
+          }
+        > a {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            color: $site-blue;
+        }
+    }
+}

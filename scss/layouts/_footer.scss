@@ -1,0 +1,16 @@
+footer {
+    display: flex;
+    background-color: $site-background;
+    flex-flow: column wrap;
+    padding:15px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+
+    div {
+        margin: 10px auto;
+        * {
+            padding: 5px;
+        }
+    }
+}
