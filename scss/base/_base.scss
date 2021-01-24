@@ -6,8 +6,19 @@
 
 body {
     width: 100vw;
+    color: $site-color;
 }
 
 main {
     margin: auto 15px;
+}
+
+section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

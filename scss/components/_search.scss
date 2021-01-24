@@ -1,0 +1,28 @@
+.search-field {
+    span {
+        background-color: $site-background;
+        padding: 10px 15px;
+        border-radius: 8px 0px 0px 8px;
+    }
+    button {
+        background-color: $site-blue;
+        padding: 10px;
+        border: 1px solid $site-blue;
+        border-radius: 8px;
+        margin-left: -10px;
+        i {
+            color: white;
+        }
+    }
+
+    input {
+        padding: 10px;
+        margin-left: -5px;
+        border: 1px solid $site-background;
+        &::placeholder {
+            color: $site-color;
+            opacity: 1;
+            font-weight: bold;
+        }
+    }
+}

@@ -21,7 +21,7 @@ header {
                 text-align: center;
                 padding-bottom: 10px;
                 border-bottom: 3px solid $line-color;
-                transition: border-bottom 0.5s, color 0.5s;
+                transition: border-bottom 0.5s, color 0.5s; 
                 transition-timing-function: linear;
                 &:hover {
                     a {
