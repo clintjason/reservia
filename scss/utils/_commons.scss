@@ -2,6 +2,19 @@
     color: $site-color-light;
 }
 
+.light-gray {
+    color: $site-background !important;
+}
+
 .component-space {
     margin: 15px 0px;
+}
+
+.space-top {
+    margin-top: 25px;
+}
+
+.flex-container-around {
+    display: flex;
+    justify-content: space-between;
 }

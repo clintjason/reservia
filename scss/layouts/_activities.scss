@@ -1,0 +1,29 @@
+.activities {
+    .activities-container {
+        margin: 20px 0px 20px;
+        figure {
+            background-color: white;
+            border-radius: 15px;
+            width: 100%;
+            margin-bottom: 25px;
+
+            .activities-img-container {
+                border-radius: 15px;
+                img {
+                    width: 100%;
+                    border-radius: 15px 15px 0px 0px;
+                }
+            }
+
+            figcaption {
+                display: block;
+                padding: 10px 10px 10px 20px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.activities-img-height-hotfix {
+    height: 265.333px;
+}

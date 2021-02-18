@@ -15,11 +15,15 @@ main {
 }
 
 section {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+article, figure {
+    cursor: pointer;
+    box-shadow: inset 0px 0px 5px 3px $line-color;
 }

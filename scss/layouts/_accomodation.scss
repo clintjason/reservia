@@ -1,0 +1,37 @@
+.accomodations {
+
+    .accomodations-container > article {
+        padding: 4px;
+        border-radius: 15px;
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: white;
+        margin-bottom: 15px;
+    
+        img {
+            border-radius: 15px 15px 0px 0px;
+        }
+    
+        div {
+            padding: 5px 12px;
+            .fa-star {
+                color: $site-blue;
+            }
+        }
+    }
+    @media all and (min-width: $small) {
+        .accomodations-container {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2% 20px;
+            & > article {
+                width:90%;
+            } 
+        }
+    }
+}
+
+.accomodation-img-height-hotfix {
+    height: 219.4px;
+}

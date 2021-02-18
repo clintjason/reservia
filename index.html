@@ -1,65 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="author" content="Clint Jason Ngassa">
     <meta name="description" content="Reservia - A demo mockup house rental html and scss intergration">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css"/>
-    <script src="https://use.fontawesome.com/53d357aebe.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
     <title>Reservia - Mockup into website</title>
 
     <!-- Open Graph data for facebook-->
 
-    <meta property="og:title" content="Title Here"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="http://www.example.com/"/>
-    <meta property="og:image" content="http://example.com/image.jpg"/>
-    <meta property="og:description" content="Description Here"/>
+    <meta property="og:title" content="Title Here" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.example.com/" />
+    <meta property="og:image" content="http://example.com/image.jpg" />
+    <meta property="og:description" content="Description Here" />
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Title Here"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="http://www.example.com/"/>
-    <meta property="og:image" content="http://example.com/image.jpg"/>
-    <meta property="og:description" content="Description Here"/>
+    <meta property="og:title" content="Title Here" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.example.com/" />
+    <meta property="og:image" content="http://example.com/image.jpg" />
+    <meta property="og:description" content="Description Here" />
 </head>
+
 <body>
     <main>
         <header>
-            <nav class="menu">
-                <img src="images/logo/Reservia.svg" class="logo" alt="Reservia Logo"/>
+            <nav>
+                <img src="images/logo/Reservia.svg" class="logo" alt="Reservia Logo" />
                 <ul>
-                  <li><a href="#accomodations">Accommodations</a></li>
-                  <li><a href="#activities">Activities</a></li>
+                    <li><a href="#accomodations">Accommodations</a></li>
+                    <li><a href="#activities">Activities</a></li>
                 </ul>
                 <a href="#" id="signup"><b>Sign up</b></a>
             </nav>
             <h1>Find a place for your dream vacation</h1>
             <small class="color-light-gray">Downtown or in nature</small>
-            <section class="filters">
+            <section class="search">
                 <form novalidate class="search-field component-space">
-                    <span><i class="fa fa-map-marker"></i></span>
-                    <input type="search" placeholder="Marseille, France"/>
-                    <button type="submit"><i class="fa fa-search fa-lg"></i></button>
+                    <span><i class="fas fa-map-marker-alt"></i></span>
+                    <input type="search" placeholder="Marseille, France" />
+                    <button type="submit"><i class="fas fa-search fa-lg"></i></button>
                 </form>
                 <h3>Filters</h3>
-                <div>
-                    <div>
-                        <i class="fa fa-heart"></i>
+                <div class="filters-containers">
+                    <div class="filter">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Low cost</span>
+                    </div>
+                    <div class="filter">
+                        <i class="fas fa-heart"></i>
                         <span>Romantic</span>
                     </div>
+                    <div class="filter">
+                        <i class="fas fa-child"></i>
+                        <span>Family-friendly</span>
+                    </div>
+                    <div class="filter">
+                        <i class="fas fa-dog"></i>
+                        <span>Pets allowed</span>
+                    </div>
                 </div>
-            </section>             
+            </section>
+            <p><i class="fas fa-info"></i>
+                <span>
+                    More than 500 accomodations are available in htis city
+                </span>
+            </p>
         </header>
-        <section class="accomodations">
-        </section>
         <section class="popular">
+            <h2 class="flex-container-around">
+                <span>Most Popular</span>
+                <i class="fas fa-chart-line"></i>
+            </h2>
+            <div class="article-container space-top">
+                <article>
+                    <img src="./images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="sweet hotel room by emile-guillemot on unsplash" class="popular-img-height-hotfix">
+                    <div>
+                        <h3>Morning Sun hotel</h3>
+                        <p><span>starting at</span> <b>€128</b></p>
+                        <p class="space-top">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="sweet hotel room by aw-creative on unsplash" class="popular-img-height-hotfix"/>
+                    <div>
+                        <h3>Au Coeur de l'eau Bed and Breakfast</h3>
+                        <p><span>Night starting at</span> <b>€71</b></p>
+                        <p class="space-top">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star light-gray"></i>
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="popular-img-height-hotfix" />
+                    <div>
+                        <h3>Tout Bleu et Blanc hotel</h3>
+                        <p><span>Night starting at</span> <b>€68</b></p>
+                        <p class="space-top">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star light-gray"></i>
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="accomodations">
+            <h2 id="accomodations">Accomodations in Marseille</h2>
+            <div class="accomodations-container space-top">
+                <article>
+                    <img src="./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                    <div>
+                        <h3>Auberge la Cannebière</h3>
+                        <p>Night starting at <b>€25</b></p>
+                        <p class="space-top">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star light-gray"></i>
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                    <div>
+                        <h3>Hôtel du port</h3>
+                        <p>Night starting at <b>€52</b></p>
+                        <p class="space-top">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                    <div>
+                        <h3>Les mouettes Hotel</h3>
+                        <p>Night starting at <b>€76</b></p>
+                        <p class="space-top">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star light-gray"></i>
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                    <div>
+                        <h3>Hôtel de la mer</h3>
+                        <p>Night starting at <b>€46</b></p>
+                        <p class="space-top">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star light-gray"></i>
+                            <i class="fas fa-star light-gray"></i>
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                    <div>
+                        <h3>Auberge Le Panier</h3>
+                        <p>Night starting at <b>€23</b></p>
+                        <p class="space-top">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star light-gray"></i>
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix"/>
+                    <div>
+                        <h3>Hôtel chez Amina</h3>
+                        <p>Night starting at <b>€96</b></p>
+                        <p class="space-top">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star light-gray"></i>
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <p><b>Show more</b></p>
         </section>
         <section class="activities">
+            <h2 id="activities">Activities in Marseille</h2>
+            <div class="activities-container">
+                <figure>
+                    <div class="activities-img-container">
+                        <img
+                            src="./images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
+                            alt="fsThe beautiful MDN logo.">
+                    </div>
+                    <figcaption>Old Port</figcaption>
+                </figure>
+                <figure>
+                    <div class="activities-img-container">
+                        <img
+                            src="./images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+                            alt="fsThe beautiful MDN logo." class="activities-img-height-hotfix">
+                    </div>
+                    <figcaption>Pomègues Fort</figcaption>
+                </figure>
+                <figure>
+                    <div class="activities-img-container">
+                        <img
+                            src="./images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
+                            alt="fsThe beautiful MDN logo.">
+                    </div>
+                    <figcaption>Frioul Island</figcaption>
+                </figure>
+                <figure>
+                    <div class="activities-img-container">
+                        <img
+                            src="./images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+                            alt="fsThe beautiful MDN logo.">
+                    </div>
+                    <figcaption>Calanques National Park</figcaption>
+                </figure>
+                <figure>
+                    <div class="activities-img-container">
+                        <img
+                            src="./images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                            alt="fsThe beautiful MDN logo.">
+                    </div>
+                    <figcaption>Notre-Dame-de-la-Garde</figcaption>
+                </figure>
+                <figure>
+                    <div class="activities-img-container">
+                        <img
+                            src="./images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
+                            alt="fsThe beautiful MDN logo.">
+                    </div>
+                    <figcaption>Longchamp Park</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
     <footer>
@@ -81,4 +289,5 @@
         </div>
     </footer>
 </body>
+
 </html>
