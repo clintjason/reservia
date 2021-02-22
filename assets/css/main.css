@@ -340,6 +340,13 @@ header > p span {
   color: #0065FC;
 }
 
+@media all and (min-width: 576px) {
+  .popular .article-container > article {
+    width: 80%;
+    margin: 15px auto;
+  }
+}
+
 @media all and (min-width: 768px) {
   .popular .article-container {
     display: -webkit-box;
@@ -349,6 +356,15 @@ header > p span {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
+  }
+  .popular .article-container > article {
+    width: 45%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .popular .article-container > article {
+    width: 32%;
   }
 }
 

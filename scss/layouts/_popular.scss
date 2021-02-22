@@ -27,11 +27,27 @@
         }
     }
 
+    @media all and (min-width: $extra_small) {
+        .article-container > article {
+            width: 80%;
+            margin: 15px auto;
+        }    
+    }
+
     @media all and (min-width: $small) {
         .article-container {
             display: flex;
             flex-flow: row wrap;
+            & > article {
+                width: 45%;
+            }
         }
+    }
+
+    @media all and (min-width: $medium) {
+        .article-container > article {
+            width: 32%;
+        }    
     }
 }
 
