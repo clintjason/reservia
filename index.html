@@ -45,9 +45,10 @@
             <h1>Find a place for your dream vacation</h1>
             <small class="color-light-gray">Downtown or in nature</small>
             <section class="search">
-                <form novalidate class="search-field component-space">
+                <form novalidate class="search-field component-space" role="search">
                     <span><i class="fas fa-map-marker-alt"></i></span>
-                    <input type="search" placeholder="Marseille, France" />
+                    <input type="search" placeholder="Marseille, France" 
+                        aria-label="Search through the site content"/>
                     <button type="submit"><i class="fas fa-search fa-lg"></i></button>
                 </form>
                 <h3>Filters</h3>
@@ -76,148 +77,151 @@
                 </span>
             </p>
         </header>
-        <!-- Section of most popular accomodations in Marseille -->
-        <section class="popular">
-            <h2 class="flex-container-around">
-                <span>Most Popular</span>
-                <i class="fas fa-chart-line"></i>
-            </h2>
-            <div class="article-container space-top">
-                <article>
-                    <img src="./images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="sweet hotel room by emile-guillemot on unsplash" class="popular-img-height-hotfix">
-                    <div>
-                        <h3>Morning Sun hotel</h3>
-                        <p><span>starting at</span> <b>€128</b></p>
-                        <p class="space-top">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="sweet hotel room by aw-creative on unsplash" class="popular-img-height-hotfix"/>
-                    <div>
-                        <h3>Au Coeur de l'eau Bed and Breakfast</h3>
-                        <p><span>Night starting at</span> <b>€71</b></p>
-                        <p class="space-top">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star light-gray"></i>
-                        </p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="popular-img-height-hotfix" />
-                    <div>
-                        <h3>Tout Bleu et Blanc hotel</h3>
-                        <p><span>Night starting at</span> <b>€68</b></p>
-                        <p class="space-top">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star light-gray"></i>
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <!-- Section of accomodations in Marseille -->
-        <section class="accomodations">
-            <h2 id="accomodations">Accomodations in Marseille</h2>
-            <div class="accomodations-container space-top">
-                <article>
-                    <img src="./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
-                    <div>
-                        <h3>Auberge la Cannebière</h3>
-                        <p>Night starting at <b>€25</b></p>
-                        <p class="space-top">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star light-gray"></i>
-                        </p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
-                    <div>
-                        <h3>Hôtel du port</h3>
-                        <p>Night starting at <b>€52</b></p>
-                        <p class="space-top">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
-                    <div>
-                        <h3>Les mouettes Hotel</h3>
-                        <p>Night starting at <b>€76</b></p>
-                        <p class="space-top">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star light-gray"></i>
-                        </p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
-                    <div>
-                        <h3>Hôtel de la mer</h3>
-                        <p>Night starting at <b>€46</b></p>
-                        <p class="space-top">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star light-gray"></i>
-                            <i class="fas fa-star light-gray"></i>
-                        </p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
-                    <div>
-                        <h3>Auberge Le Panier</h3>
-                        <p>Night starting at <b>€23</b></p>
-                        <p class="space-top">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star light-gray"></i>
-                        </p>
-                    </div>
-                </article>
-                <article>
-                    <img src="./images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix"/>
-                    <div>
-                        <h3>Hôtel chez Amina</h3>
-                        <p>Night starting at <b>€96</b></p>
-                        <p class="space-top">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star light-gray"></i>
-                        </p>
-                    </div>
-                </article>
-            </div>
-            <p class=""><b>Show more</b></p>
-        </section>
+        <!-- Accomodations sections -->
+        <div class="accomodations-flex-container">
+            <!-- Section of most popular accomodations in Marseille -->
+            <section class="popular">
+                <h2 class="flex-container-around">
+                    <span>Most Popular</span>
+                    <i class="fas fa-chart-line"></i>
+                </h2>
+                <div class="article-container space-top">
+                    <article>
+                        <img src="./images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="sweet hotel room by emile-guillemot on unsplash" class="popular-img-height-hotfix">
+                        <div>
+                            <h3>Morning Sun hotel</h3>
+                            <p><span>starting at</span> <b>€128</b></p>
+                            <p class="space-top">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="sweet hotel room by aw-creative on unsplash" class="popular-img-height-hotfix"/>
+                        <div>
+                            <h3>Au Coeur de l'eau Bed and Breakfast</h3>
+                            <p><span>Night starting at</span> <b>€71</b></p>
+                            <p class="space-top">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star light-gray"></i>
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="popular-img-height-hotfix" />
+                        <div>
+                            <h3>Tout Bleu et Blanc hotel</h3>
+                            <p><span>Night starting at</span> <b>€68</b></p>
+                            <p class="space-top">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star light-gray"></i>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- Section of accomodations in Marseille -->
+            <section class="accomodations">
+                <h2 id="accomodations">Accomodations in Marseille</h2>
+                <div class="accomodations-container space-top">
+                    <article>
+                        <img src="./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                        <div>
+                            <h3>Auberge la Cannebière</h3>
+                            <p>Night starting at <b>€25</b></p>
+                            <p class="space-top">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star light-gray"></i>
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                        <div>
+                            <h3>Hôtel du port</h3>
+                            <p>Night starting at <b>€52</b></p>
+                            <p class="space-top">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                        <div>
+                            <h3>Les mouettes Hotel</h3>
+                            <p>Night starting at <b>€76</b></p>
+                            <p class="space-top">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star light-gray"></i>
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                        <div>
+                            <h3>Hôtel de la mer</h3>
+                            <p>Night starting at <b>€46</b></p>
+                            <p class="space-top">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star light-gray"></i>
+                                <i class="fas fa-star light-gray"></i>
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                        <div>
+                            <h3>Auberge Le Panier</h3>
+                            <p>Night starting at <b>€23</b></p>
+                            <p class="space-top">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star light-gray"></i>
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix"/>
+                        <div>
+                            <h3>Hôtel chez Amina</h3>
+                            <p>Night starting at <b>€96</b></p>
+                            <p class="space-top">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star light-gray"></i>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <p class=""><b>Show more</b></p>
+            </section>
+        </div>
         <!-- Section of Activities in Marseille -->
         <section class="activities">
             <h2 id="activities">Activities in Marseille</h2>
