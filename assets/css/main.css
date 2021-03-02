@@ -213,7 +213,7 @@ header > p span {
 .search-field {
   -webkit-box-shadow: inset 0px 0px 0px 1px #bbb8b85b;
           box-shadow: inset 0px 0px 0px 1px #bbb8b85b;
-  width: 80%;
+  width: 270px;
   border-radius: 10px 0px 0px 10px;
   border: 1px solid #F2F2F2;
   display: -webkit-box;
@@ -230,15 +230,20 @@ header > p span {
   margin-left: -3px;
 }
 
-.search-field button {
+.search-field #search-text, .search-field #search-icon {
   background-color: #0065FC;
   padding: 12px;
   border: 1px solid #0065FC;
   border-radius: 8px;
+  color: white;
 }
 
-.search-field button i {
-  color: white;
+.search-field #search-icon {
+  display: block;
+}
+
+.search-field #search-text {
+  display: none;
 }
 
 .search-field input {
@@ -251,30 +256,45 @@ header > p span {
   color: #202020;
   opacity: 1;
   font-weight: bold;
+  text-overflow: ellipsis;
 }
 
 .search-field input:-ms-input-placeholder {
   color: #202020;
   opacity: 1;
   font-weight: bold;
+  text-overflow: ellipsis;
 }
 
 .search-field input::-ms-input-placeholder {
   color: #202020;
   opacity: 1;
   font-weight: bold;
+  text-overflow: ellipsis;
 }
 
 .search-field input::placeholder {
   color: #202020;
   opacity: 1;
   font-weight: bold;
+  text-overflow: ellipsis;
 }
 
 .search-field input:focus {
   border: 1px solid #0065FC;
   border-right: none;
   outline: none;
+}
+
+@media all and (min-width: 576px) {
+  .search-field .search-field #search-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .search-field .search-field #search-icon {
+    display: none;
+  }
 }
 
 .filters-containers {
@@ -310,6 +330,7 @@ header > p span {
   border-radius: 0px 20px 20px 0px;
   -webkit-box-shadow: inset 0px 0px 3px 0px #bbb8b85b;
           box-shadow: inset 0px 0px 3px 0px #bbb8b85b;
+  font-weight: bold;
 }
 
 .popular {
@@ -441,6 +462,14 @@ header > p span {
     -ms-grid-column-span: 2;
     grid-column: 3/5;
     margin-left: 0px;
+  }
+  .accomodations .search-field #search-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .accomodations .search-field #search-icon {
+    display: none;
   }
 }
 

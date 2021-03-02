@@ -43,6 +43,16 @@
                 margin-left: 0px;
             } 
         }
+
+        // search field responsive
+        .search-field {
+            #search-text {
+                display: flex;             
+            }
+            #search-icon {
+                display: none;
+            }
+        }
     }
     @media all and (min-width: $medium) {
         

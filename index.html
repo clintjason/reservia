@@ -6,10 +6,11 @@
     <meta name="description" content="Reservia - A demo mockup house rental html and scss intergration">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <title>Reservia - Mockup into website</title>
 
     <!-- Open Graph data for facebook-->
@@ -46,10 +47,14 @@
             <small class="color-light-gray">Downtown or in nature</small>
             <section class="search">
                 <form novalidate class="search-field component-space" role="search">
-                    <span><i class="fas fa-map-marker-alt"></i></span>
+                    <span class="icon-aside"><i class="fas fa-map-marker-alt"></i></span>
                     <input type="search" placeholder="Marseille, France" 
                         aria-label="Search through the site content"/>
-                    <button type="submit"><i class="fas fa-search fa-lg"></i></button>
+                    <button type="submit" id="search-icon">
+                        <i class="fas fa-search fa-lg"></i>
+                    </button>
+                    <button type="submit" id="search-text">Search</button>
+
                 </form>
                 <h3>Filters</h3>
                 <div class="filters-containers">
