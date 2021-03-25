@@ -1,0 +1,73 @@
+.accomodations {
+
+    .accomodations-container {
+        margin-bottom: 25px;
+        & > article {
+            padding: 4px;
+            border-radius: 15px;
+            display: flex;
+            flex-flow: column nowrap;
+            background-color: white;
+            margin-bottom: 15px;
+        
+            img {
+                border-radius: 15px 15px 0px 0px;
+            }
+        
+            div {
+                padding: 5px 12px;
+                .fa-star {
+                    color: $site-blue;
+                }
+            }
+        }
+    }
+
+    @media all and (min-width: $extra_small) {
+        .accomodations-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-items: center;
+            gap: 25px 0px;
+            & > article {
+                width: 92%;
+                margin: unset;
+            } 
+            
+            & > article:nth-child(odd) {
+            grid-column: 1/3;
+            margin-right: 0px;
+            } 
+            & > article:nth-child(even) {
+                grid-column: 3/5;
+                margin-left: 0px;
+            } 
+        }
+    }
+    
+    @media all and (min-width: $medium) {
+        
+        .accomodations-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            & > article {
+                width: 45%;
+                margin: unset;
+            }
+        }
+    }
+    @media all and (min-width: $large) {
+        
+        .accomodations-container {
+            justify-content: space-between;
+            & > article {
+                width: 32%;
+            }
+        }
+    }
+}
+
+.accomodation-img-height-hotfix {
+    height: 219.4px;
+}

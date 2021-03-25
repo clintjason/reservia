@@ -1,0 +1,29 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    color: $site-color;
+    position: relative;
+}
+
+main {
+    margin: auto 15px;
+}
+
+section {
+    padding: 20px 0px 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+article, figure {
+    cursor: pointer;
+    box-shadow: inset 0px 0px 5px 5px $line-color;
+}

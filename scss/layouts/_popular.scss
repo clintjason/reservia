@@ -1,0 +1,67 @@
+.popular {
+    background-color: $site-background;
+    width: 100vw;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    
+    .article-container > article {
+        padding: 4px;
+        border-radius: 15px;
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: white;
+        margin-bottom: 15px;
+        height: 150px;
+    
+        img {
+            width: 40%;
+            border-radius: 15px 0px 0px 15px;
+            height: auto;
+            object-fit: cover;
+            object-position: bottom;
+        }
+    
+        div {
+            padding: 5px 12px;
+            width: 60%;
+            .fa-star {
+                color: $site-blue;
+            }
+        }
+    }
+
+    @media all and (max-width: 305px) {
+        .article-container > article {
+            height: 200px;
+        }
+    }
+
+    @media all and (min-width: $extra_small) {
+        .article-container > article {
+            width: 80%;
+            margin: 15px auto;
+        }    
+    }
+
+    @media all and (min-width: $small) {
+        .article-container {
+            display: flex;
+            flex-flow: row wrap;
+            & > article {
+                width: 45%;
+            }
+        }
+    }
+
+    @media all and (min-width: $medium) {
+        .article-container > article {
+            width: 100%;
+        }    
+    }
+}
+
+.popular-img-height-hotfix {
+    height: 132.8px;
+}

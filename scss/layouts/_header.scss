@@ -1,0 +1,112 @@
+header {
+    margin-bottom: 30px;
+    a{
+        text-decoration: none;
+        color: $site-color;
+    }
+    nav {
+        width: 100%;
+
+        ul {
+            list-style-type: none;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 10px;
+            /* border-bottom: 3px solid $line-color; */
+            margin-left: -15px;
+
+            li {
+                display: inline-block;
+                width: 50%;
+                text-align: center;
+                padding-bottom: 10px;
+                border-bottom: 3px solid $line-color;
+                transition: border-bottom 0.5s, color 0.5s; 
+                transition-timing-function: linear;
+                &:visited, &:hover, &:active, &:focus {
+                    a {
+                        &:visited, &:hover, &:active, &:focus {
+                            color: $site-blue;
+                        }
+                    }
+                    border-bottom: 3px solid $site-blue;
+                }
+            }
+          }
+        > a {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            color: $site-blue;
+        }
+    }
+    .fa-info {
+        padding: 6px;
+        border: 2px solid $site-background;
+        color: $site-blue;
+        border-radius: 50px;
+        margin-right: 10px;
+        height: 33px;
+        text-align: center;
+        width: 33px;
+    }
+    > p {
+        display: flex;
+        span {
+            align-self: center;
+        }
+    }
+
+    @media all and (min-width: $extra_small) {
+        nav {
+            width: unset;
+            display: flex;
+            justify-content: space-between;
+            ul {
+                width: 100%;
+                padding: 0px 0px 11px;
+                margin-left: 0px;
+                align-self: end;
+                position: relative;
+                right: 100px;
+                justify-content: flex-end;
+
+                li {
+                    border-bottom: unset;
+                    display: inline;
+                    padding-bottom: unset;
+                    width: 25%;
+                    padding-top: 14px;
+                    transition: border-top 0.2s, color 0.2s; 
+                    transition-timing-function: linear;
+
+                    &:visited, &:hover, &:active, &:focus {
+                        border-top: 3px solid $site-blue;
+                        border-bottom: unset;
+                        color: $site-blue;
+
+                        a {
+                            &:visited, &:hover, &:active, &:focus {
+                                color: $site-blue;
+                            }
+                        }
+                    }
+                }
+
+                li:nth-child(2) {
+                    margin-left: 55px;
+                }
+            }
+        }
+    }
+
+    @media all and (min-width: $small) {
+        nav {
+            ul {
+                width: 40%;
+                
+            }
+        }
+    }
+}

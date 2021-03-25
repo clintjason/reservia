@@ -1,0 +1,30 @@
+footer {
+    display: flex;
+    background-color: $site-background;
+    flex-flow: column nowrap;
+    padding:15px;
+    position: absolute;
+    width: 100%;
+    /* height: 443px; */
+
+    div {
+        /*margin: 10px auto;
+         width: 220px; */
+        * {
+            padding: 5px;
+        }
+    }
+}
+
+@media all and (min-width: $extra_small) {
+    footer {
+        flex-flow: row wrap;
+        div {
+            margin: 5px auto;
+            /* width: 220px; */
+            * {
+                padding: 5px;
+            }
+        }
+    }
+}

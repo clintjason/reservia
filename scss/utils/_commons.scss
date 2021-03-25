@@ -1,0 +1,28 @@
+.color-light-gray {
+    color: $site-color-light;
+}
+
+.light-gray {
+    color: $site-background !important;
+}
+
+.component-space {
+    margin: 15px 0px;
+}
+
+.space-top {
+    margin-top: 1rem;
+}
+
+.space-btm {
+    margin-top: 50px;
+}
+
+.space-around {
+    margin: 25px auto;
+}
+
+.flex-container-around {
+    display: flex;
+    justify-content: space-between;
+}

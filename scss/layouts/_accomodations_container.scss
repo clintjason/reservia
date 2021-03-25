@@ -1,0 +1,40 @@
+
+@media all and (min-width: $medium) {
+    .accomodations-flex-container {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-evenly;
+        .accomodations {
+            width: 60%;
+            background-color: $site-background;
+            padding: 15px;
+            margin-right: 10px;
+            border-radius: 15px;
+        }
+        .popular {
+            width: 35%;
+            margin-left: 10px;
+            border-radius: 15px;
+            margin-right: unset;
+            margin-left: unset;
+            padding-right: 10px;
+            padding-left: 10px;
+
+            .article-container {
+                flex-flow: column wrap;
+            }
+        }
+    }
+}
+
+@media all and (min-width: $large) {
+    .accomodations-flex-container {
+        justify-content: start;
+        .accomodations {
+            width: 70%;
+        }
+        .popular {
+            width: 30%;
+        }
+    }
+}

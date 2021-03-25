@@ -1,0 +1,25 @@
+.filters-containers {
+    display: flex;
+    flex-flow: row wrap;
+    .filter {
+        margin: 10px 0px;
+        i {
+            color: $site-blue;
+            background-color: $site-lightblue;
+            padding: 12px;
+            border-radius: 50%;
+            z-index: 1;
+            position: relative;
+            left: 24px;
+            top: 1px;
+            box-shadow: inset 0px 0px 0px 1px;
+        }
+        span {
+            border: 2px solid $site-background;
+            padding: 10px 20px 10px 30px;
+            border-radius: 0px 20px 20px 0px;
+            box-shadow: inset 0px 0px 3px 0px $line-color;
+            font-weight: bold;
+        }
+    }
+}
