@@ -16,7 +16,7 @@ main {
 }
 
 section {
-  padding: 20px 10px 20px 0px;
+  padding: 20px 0px 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,8 +26,8 @@ h1, h2, h3, h4, h5, h6 {
 
 article, figure {
   cursor: pointer;
-  -webkit-box-shadow: inset 0px 0px 5px 3px #bbb8b85b;
-          box-shadow: inset 0px 0px 5px 3px #bbb8b85b;
+  -webkit-box-shadow: inset 0px 0px 5px 5px #bbb8b85b;
+          box-shadow: inset 0px 0px 5px 5px #bbb8b85b;
 }
 
 .color-light-gray {
@@ -79,16 +79,32 @@ footer {
   padding: 15px;
   position: absolute;
   width: 100%;
-  height: 443px;
+  /* height: 443px; */
 }
 
 footer div {
-  margin: 10px auto;
-  width: 220px;
+  /*margin: 10px auto;
+         width: 220px; */
 }
 
 footer div * {
   padding: 5px;
+}
+
+@media all and (min-width: 576px) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  footer div {
+    margin: 5px auto;
+    /* width: 220px; */
+  }
+  footer div * {
+    padding: 5px;
+  }
 }
 
 header {
@@ -168,27 +184,34 @@ header > p span {
       align-self: center;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 576px) {
   header nav {
     width: unset;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   header nav ul {
-    width: 40%;
-    padding: 0px 0px 10px;
+    width: 100%;
+    padding: 0px 0px 11px;
     margin-left: 0px;
     -ms-flex-item-align: end;
         -ms-grid-row-align: end;
         align-self: end;
     position: relative;
-    left: 38%;
+    right: 100px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   header nav ul li {
     border-bottom: unset;
     display: inline;
     padding-bottom: unset;
+    width: 25%;
     padding-top: 14px;
     -webkit-transition: border-top 0.2s, color 0.2s;
     transition: border-top 0.2s, color 0.2s;
@@ -198,9 +221,19 @@ header > p span {
   header nav ul li:visited, header nav ul li:hover, header nav ul li:active, header nav ul li:focus {
     border-top: 3px solid #0065FC;
     border-bottom: unset;
+    color: #0065FC;
   }
   header nav ul li:visited a:visited, header nav ul li:visited a:hover, header nav ul li:visited a:active, header nav ul li:visited a:focus, header nav ul li:hover a:visited, header nav ul li:hover a:hover, header nav ul li:hover a:active, header nav ul li:hover a:focus, header nav ul li:active a:visited, header nav ul li:active a:hover, header nav ul li:active a:active, header nav ul li:active a:focus, header nav ul li:focus a:visited, header nav ul li:focus a:hover, header nav ul li:focus a:active, header nav ul li:focus a:focus {
     color: #0065FC;
+  }
+  header nav ul li:nth-child(2) {
+    margin-left: 55px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  header nav ul {
+    width: 40%;
   }
 }
 
@@ -286,13 +319,19 @@ header > p span {
   outline: none;
 }
 
+@media all and (max-width: 285px) {
+  .search-field {
+    width: 90%;
+  }
+}
+
 @media all and (min-width: 576px) {
-  .search-field .search-field #search-text {
+  .search-field #search-text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .search-field .search-field #search-icon {
+  .search-field #search-icon {
     display: none;
   }
 }
@@ -374,6 +413,12 @@ header > p span {
 
 .popular .article-container > article div .fa-star {
   color: #0065FC;
+}
+
+@media all and (max-width: 305px) {
+  .popular .article-container > article {
+    height: 200px;
+  }
 }
 
 @media all and (min-width: 576px) {
@@ -463,14 +508,6 @@ header > p span {
     grid-column: 3/5;
     margin-left: 0px;
   }
-  .accomodations .search-field #search-text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .accomodations .search-field #search-icon {
-    display: none;
-  }
 }
 
 @media all and (min-width: 992px) {
@@ -507,30 +544,147 @@ header > p span {
   height: 219.4px;
 }
 
+.activities {
+  /* @media all and (min-width: $extra_small) {
+        .activities-container {
+            .activity-row {
+                display: flex;
+                flex-direction: row;
+                .activity {
+                    // width: 450px; 
+                    width: 45%;
+                }
+            }
+        }
+    } */
+}
+
 .activities .activities-container {
   margin: 20px 0px 20px;
 }
 
-.activities .activities-container figure {
+.activities .activities-container .activity {
   background-color: white;
   border-radius: 15px;
   width: 100%;
-  margin-bottom: 25px;
+  margin: 0px auto 25px;
+  -webkit-box-shadow: 0px 0px 5px 4px #bbb8b85b;
+          box-shadow: 0px 0px 5px 4px #bbb8b85b;
 }
 
-.activities .activities-container figure .activities-img-container {
-  border-radius: 15px;
-}
-
-.activities .activities-container figure .activities-img-container img {
+.activities .activities-container .activity > img {
   width: 100%;
+  height: 200.75px;
   border-radius: 15px 15px 0px 0px;
 }
 
-.activities .activities-container figure figcaption {
+.activities .activities-container .activity p {
   display: block;
   padding: 10px 10px 10px 20px;
   font-weight: bold;
+}
+
+.activities .activities-container #first-column {
+  width: auto;
+}
+
+@media all and (min-width: 420px) {
+  .activities .activities-container .activity-row .activity {
+    /* width: 450px; */
+    width: 85%;
+  }
+}
+
+@media all and (min-width: 576px) {
+  .activities .activities-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .activities .activities-container .activity-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-bottom: 30px;
+  }
+  .activities .activities-container .activity-row .activity {
+    margin: unset;
+    width: auto;
+  }
+  .activities .activities-container .activity-row .activity > img {
+    height: 80%;
+  }
+  .activities .activities-container .activity-row > .activity {
+    width: 45%;
+  }
+  .activities .activities-container .activity-row > .activity > img {
+    height: 90%;
+  }
+  .activities .activities-container .activity-row .activity-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 45%;
+  }
+  .activities .activities-container .activity-row .activity-column > .activity {
+    width: auto;
+    height: 245px;
+  }
+  .activities .activities-container .activity-row .activity-column > .activity:nth-child(1) {
+    margin-bottom: 25px;
+  }
+  .activities .activities-container .activity-row .activity-column > #pomegues {
+    height: 265px;
+  }
+  .activities .activities-container .activity-row .activity-column > #frioul {
+    height: 200px;
+  }
+  .activities .activities-container .activity-row #first-column {
+    width: 45%;
+  }
+  .activities .activities-container #second-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .activities .activities-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .activities .activities-container .activity-row {
+    width: 50%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .activities .activities-container .activity-row .activity-column > #pomegues {
+    height: 292px;
+  }
+  .activities .activities-container #second-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .activities-img-height-hotfix {

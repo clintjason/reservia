@@ -15,7 +15,7 @@ main {
 }
 
 section {
-    padding: 20px 10px 20px 0px;
+    padding: 20px 0px 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,5 +25,5 @@ h1, h2, h3, h4, h5, h6 {
 
 article, figure {
     cursor: pointer;
-    box-shadow: inset 0px 0px 5px 3px $line-color;
+    box-shadow: inset 0px 0px 5px 5px $line-color;
 }

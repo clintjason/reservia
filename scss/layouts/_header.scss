@@ -57,21 +57,26 @@ header {
             align-self: center;
         }
     }
-    @media all and (min-width: $small) {
+
+    @media all and (min-width: $extra_small) {
         nav {
             width: unset;
             display: flex;
+            justify-content: space-between;
             ul {
-                width: 40%;
-                padding: 0px 0px 10px;
+                width: 100%;
+                padding: 0px 0px 11px;
                 margin-left: 0px;
                 align-self: end;
                 position: relative;
-                left: 38%;
+                right: 100px;
+                justify-content: flex-end;
+
                 li {
                     border-bottom: unset;
                     display: inline;
                     padding-bottom: unset;
+                    width: 25%;
                     padding-top: 14px;
                     transition: border-top 0.2s, color 0.2s; 
                     transition-timing-function: linear;
@@ -79,6 +84,8 @@ header {
                     &:visited, &:hover, &:active, &:focus {
                         border-top: 3px solid $site-blue;
                         border-bottom: unset;
+                        color: $site-blue;
+
                         a {
                             &:visited, &:hover, &:active, &:focus {
                                 color: $site-blue;
@@ -86,6 +93,19 @@ header {
                         }
                     }
                 }
+
+                li:nth-child(2) {
+                    margin-left: 55px;
+                }
+            }
+        }
+    }
+
+    @media all and (min-width: $small) {
+        nav {
+            ul {
+                width: 40%;
+                
             }
         }
     }

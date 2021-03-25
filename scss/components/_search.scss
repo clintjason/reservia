@@ -42,14 +42,21 @@
             outline: none;
         }
     }
-    @media all and (min-width:$extra_small) {
-        .search-field {
-            #search-text {
-                display: flex;             
-            }
-            #search-icon {
-                display: none;
-            }
+}
+
+@media all and (max-width: 285px) {
+    .search-field {
+        width: 90%;
+    }
+}
+
+@media all and (min-width:$extra_small) {
+    .search-field {
+        #search-text {
+            display: flex;             
+        }
+        #search-icon {
+            display: none;
         }
     }
 }

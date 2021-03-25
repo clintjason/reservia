@@ -32,6 +32,12 @@
         }
     }
 
+    @media all and (max-width: 305px) {
+        .article-container > article {
+            height: 200px;
+        }
+    }
+
     @media all and (min-width: $extra_small) {
         .article-container > article {
             width: 80%;

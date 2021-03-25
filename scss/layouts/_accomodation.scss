@@ -22,7 +22,7 @@
             }
         }
     }
-    
+
     @media all and (min-width: $extra_small) {
         .accomodations-container {
             display: grid;
@@ -43,17 +43,8 @@
                 margin-left: 0px;
             } 
         }
-
-        // search field responsive
-        .search-field {
-            #search-text {
-                display: flex;             
-            }
-            #search-icon {
-                display: none;
-            }
-        }
     }
+    
     @media all and (min-width: $medium) {
         
         .accomodations-container {
