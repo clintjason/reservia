@@ -3,8 +3,10 @@
     flex-flow: row wrap;
     .filter {
         margin: 10px 0px;
+        transition: transform 0.5s;
         i {
             color: $site-blue;
+            border: 1px solid $site-blue;
             background-color: $site-lightblue;
             padding: 12px;
             border-radius: 50%;
@@ -13,6 +15,7 @@
             left: 24px;
             top: 1px;
             box-shadow: inset 0px 0px 0px 1px;
+            transition: transform 2s;
         }
         span {
             border: 2px solid $site-background;
@@ -20,6 +23,27 @@
             border-radius: 0px 20px 20px 0px;
             box-shadow: inset 0px 0px 3px 0px $line-color;
             font-weight: bold;
+        }
+        &:hover {
+            transform: scale(1.1);
+            i {
+                //animation: rotation 2s 1 alternate both running;
+                //transition: transform 4s ease-in-out 1s;
+                transform: rotate(360deg);
+                color: white;
+                background-color: $site-blue;
+                border-color: 2px solid $site-background;
+            }
+            span {
+
+                //border-color: $site-blue;
+                //animation: borderFill 2s 1 ease-in-out;
+                animation-duration: 2s;
+                animation-name: borderFill;
+                animation-iteration-count: 1;
+                animation-direction: alternate;
+            }
+
         }
     }
 }

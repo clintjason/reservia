@@ -27,3 +27,13 @@ article, figure {
     cursor: pointer;
     box-shadow: inset 0px 0px 5px 5px $line-color;
 }
+
+*:focus {
+    outline: 5px inset $site-blue;
+    outline-offset: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: $site-color;
+}

@@ -30,8 +30,20 @@ article, figure {
           box-shadow: inset 0px 0px 5px 5px #bbb8b85b;
 }
 
+*:focus {
+  outline: 5px inset #0065FC;
+  outline-offset: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+}
+
 .color-light-gray {
   color: #202020ba;
+  font-size: inherit;
+  font-weight: 600;
 }
 
 .light-gray {
@@ -63,8 +75,81 @@ article, figure {
           justify-content: space-between;
 }
 
+@-webkit-keyframes rotation {
+  from {
+    rotate: -360deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}
+
+@keyframes rotation {
+  from {
+    rotate: -360deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}
+
+@-webkit-keyframes borderFill {
+  0% {
+    border-top-color: #0065FC;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  25% {
+    border-top-color: #0065FC;
+    border-right-color: #0065FC;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: #0065FC;
+    border-right-color: #0065FC;
+    border-bottom-color: #0065FC;
+    border-left-color: transparent;
+  }
+  100% {
+    border-top-color: #0065FC;
+    border-right-color: #0065FC;
+    border-bottom-color: #0065FC;
+    border-left-color: #0065FC;
+  }
+}
+
+@keyframes borderFill {
+  0% {
+    border-top-color: #0065FC;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  25% {
+    border-top-color: #0065FC;
+    border-right-color: #0065FC;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: #0065FC;
+    border-right-color: #0065FC;
+    border-bottom-color: #0065FC;
+    border-left-color: transparent;
+  }
+  100% {
+    border-top-color: #0065FC;
+    border-right-color: #0065FC;
+    border-bottom-color: #0065FC;
+    border-left-color: #0065FC;
+  }
+}
+
 body {
   font-size: 16px;
+  font-family: 'raleway', serif;
 }
 
 footer {
@@ -82,6 +167,11 @@ footer {
   /* height: 443px; */
 }
 
+footer a {
+  color: unset;
+  text-decoration: unset;
+}
+
 footer div {
   /*margin: 10px auto;
          width: 220px; */
@@ -89,6 +179,11 @@ footer div {
 
 footer div * {
   padding: 5px;
+}
+
+footer div *:hover {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 @media all and (min-width: 576px) {
@@ -109,11 +204,6 @@ footer div * {
 
 header {
   margin-bottom: 30px;
-}
-
-header a {
-  text-decoration: none;
-  color: #202020;
 }
 
 header nav {
@@ -140,25 +230,35 @@ header nav ul li {
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 3px solid #bbb8b85b;
-  -webkit-transition: border-bottom 0.5s, color 0.5s;
-  transition: border-bottom 0.5s, color 0.5s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
 }
 
 header nav ul li:visited, header nav ul li:hover, header nav ul li:active, header nav ul li:focus {
   border-bottom: 3px solid #0065FC;
 }
 
-header nav ul li:visited a:visited, header nav ul li:visited a:hover, header nav ul li:visited a:active, header nav ul li:visited a:focus, header nav ul li:hover a:visited, header nav ul li:hover a:hover, header nav ul li:hover a:active, header nav ul li:hover a:focus, header nav ul li:active a:visited, header nav ul li:active a:hover, header nav ul li:active a:active, header nav ul li:active a:focus, header nav ul li:focus a:visited, header nav ul li:focus a:hover, header nav ul li:focus a:active, header nav ul li:focus a:focus {
+header nav ul li:visited a, header nav ul li:hover a, header nav ul li:active a, header nav ul li:focus a {
   color: #0065FC;
+  font-weight: bold;
 }
 
-header nav > a {
+header nav ul li:visited a:visited, header nav ul li:visited a:hover, header nav ul li:visited a:active, header nav ul li:visited a:focus, header nav ul li:hover a:visited, header nav ul li:hover a:hover, header nav ul li:hover a:active, header nav ul li:hover a:focus, header nav ul li:active a:visited, header nav ul li:active a:hover, header nav ul li:active a:active, header nav ul li:active a:focus, header nav ul li:focus a:visited, header nav ul li:focus a:hover, header nav ul li:focus a:active, header nav ul li:focus a:focus {
+  color: #0065FC;
+  font-weight: bold;
+}
+
+header nav > a:last-child {
   position: absolute;
   top: 16px;
   right: 20px;
   color: #0065FC;
+}
+
+header nav > a:last-child:hover {
+  background-color: #0065FC;
+  color: white;
+  border-radius: 15px;
+  padding: 10px;
+  top: 7px;
 }
 
 header .fa-info {
@@ -212,7 +312,7 @@ header > p span {
     display: inline;
     padding-bottom: unset;
     width: 25%;
-    padding-top: 14px;
+    padding-top: 16px;
     -webkit-transition: border-top 0.2s, color 0.2s;
     transition: border-top 0.2s, color 0.2s;
     -webkit-transition-timing-function: linear;
@@ -252,9 +352,16 @@ header > p span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* #search-text, #search-icon {
+        background-color: $site-blue;
+        padding: 12px;
+        border: 1px solid $site-blue;
+        border-radius: 8px;
+        color: white;
+    } */
 }
 
-.search-field span {
+.search-field > span {
   background-color: #F2F2F2;
   padding: 12px 15px;
   -webkit-box-shadow: inset 0px 0px 0px 1px #bbb8b85b;
@@ -263,12 +370,17 @@ header > p span {
   margin-left: -3px;
 }
 
-.search-field #search-text, .search-field #search-icon {
+.search-field > button {
   background-color: #0065FC;
   padding: 12px;
   border: 1px solid #0065FC;
   border-radius: 8px;
   color: white;
+}
+
+.search-field > button:hover {
+  background-color: #0055d3;
+  font-weight: 600;
 }
 
 .search-field #search-icon {
@@ -348,10 +460,15 @@ header > p span {
 
 .filters-containers .filter {
   margin: 10px 0px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .filters-containers .filter i {
   color: #0065FC;
+  border: 1px solid #0065FC;
   background-color: #DEEBFF;
   padding: 12px;
   border-radius: 50%;
@@ -361,6 +478,10 @@ header > p span {
   top: 1px;
   -webkit-box-shadow: inset 0px 0px 0px 1px;
           box-shadow: inset 0px 0px 0px 1px;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
 }
 
 .filters-containers .filter span {
@@ -370,6 +491,30 @@ header > p span {
   -webkit-box-shadow: inset 0px 0px 3px 0px #bbb8b85b;
           box-shadow: inset 0px 0px 3px 0px #bbb8b85b;
   font-weight: bold;
+}
+
+.filters-containers .filter:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.filters-containers .filter:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  color: white;
+  background-color: #0065FC;
+  border-color: 2px solid #F2F2F2;
+}
+
+.filters-containers .filter:hover span {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: borderFill;
+          animation-name: borderFill;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .popular {
@@ -413,6 +558,11 @@ header > p span {
 
 .popular .article-container > article div .fa-star {
   color: #0065FC;
+}
+
+.popular .article-container > article:hover {
+  -webkit-box-shadow: 0px 0px 6px 7px #bababa;
+          box-shadow: 0px 0px 6px 7px #bababa;
 }
 
 @media all and (max-width: 305px) {
@@ -481,6 +631,11 @@ header > p span {
 
 .accomodations .accomodations-container > article div .fa-star {
   color: #0065FC;
+}
+
+.accomodations .accomodations-container > article:hover {
+  -webkit-box-shadow: 0px 0px 6px 7px #bababa;
+          box-shadow: 0px 0px 6px 7px #bababa;
 }
 
 @media all and (min-width: 576px) {
@@ -575,6 +730,8 @@ header > p span {
 .activities .activities-container .activity > img {
   width: 100%;
   height: 200.75px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15px 15px 0px 0px;
 }
 
@@ -582,6 +739,12 @@ header > p span {
   display: block;
   padding: 10px 10px 10px 20px;
   font-weight: bold;
+}
+
+.activities .activities-container .activity:hover {
+  -webkit-box-shadow: 0px 0px 6px 7px #bababa;
+          box-shadow: 0px 0px 6px 7px #bababa;
+  cursor: pointer;
 }
 
 .activities .activities-container #first-column {

@@ -2,10 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta name="author" content="Clint Jason Ngassa">
-    <meta name="description" content="Reservia - A demo mockup house rental html and scss intergration">
+    <meta name="author" content="Clint Jason Ngassa" />
+    <meta name="description" content="Reservia - A demo mockup house rental html and scss intergration" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Raleway" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
@@ -36,67 +39,79 @@
     <main>
         <header>
             <nav>
-                <img src="images/logo/Reservia.svg" class="logo" alt="Reservia Logo" />
+                <a href="#">
+                    <img src="images/logo/Reservia.svg" class="logo" alt="Reservia Logo" />
+                </a>
+                    
                 <ul>
                     <li><a href="#accomodations">Accommodations</a></li>
                     <li><a href="#activities">Activities</a></li>
                 </ul>
                 <a href="#" id="signup"><b>Sign up</b></a>
             </nav>
-            <h1>Find a place for your dream vacation</h1>
-            <small class="color-light-gray">Downtown or in nature</small>
+            <h1><a href="#">Find a place for your dream vacation</a></h1>
+            <small class="color-light-gray"><a href="#">Downtown or in nature</small></a>
             <section class="search">
-                <form novalidate class="search-field component-space" role="search">
+                <form novalidate class="search-field component-space" role="search" aria-label="Search for an accomodation">
                     <span class="icon-aside"><i class="fas fa-map-marker-alt"></i></span>
                     <input type="search" placeholder="Marseille, France" 
                         aria-label="Search through the site content"/>
-                    <button type="submit" id="search-icon">
-                        <i class="fas fa-search fa-lg"></i>
+                    <button type="submit">
+                        <i class="fas fa-search fa-lg" id="search-icon"></i>
+                        <span id="search-text">Search</span>
                     </button>
-                    <button type="submit" id="search-text">Search</button>
+                    <!-- <button type="submit" id="search-text">Search</button> -->
                 </form>
                 
-                <h3>Filters</h3>
+                <h2><a href="#">Filters</a></h2>
                 <div class="filters-containers">
-                    <div class="filter">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <span>Low cost</span>
-                    </div>
-                    <div class="filter">
-                        <i class="fas fa-heart"></i>
-                        <span>Romantic</span>
-                    </div>
-                    <div class="filter">
-                        <i class="fas fa-child"></i>
-                        <span>Family-friendly</span>
-                    </div>
-                    <div class="filter">
-                        <i class="fas fa-dog"></i>
-                        <span>Pets allowed</span>
-                    </div>
+                    <a href="#">
+                        <div class="filter">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Low cost</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="filter">
+                            <i class="fas fa-heart"></i>
+                            <span>Romantic</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="filter">
+                            <i class="fas fa-child"></i>
+                            <span>Family-friendly</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="filter">
+                            <i class="fas fa-dog"></i>
+                            <span>Pets allowed</span>
+                        </div>
+                    </a>
                 </div>
             </section>
-            <p><i class="fas fa-info"></i>
+            <p><a href="#"><i class="fas fa-info"></i>
                 <span>
-                    More than 500 accomodations are available in htis city
-                </span>
+                    More than 500 accomodations are available in this city
+                </span></a>
             </p>
         </header>
         <!-- Accomodations sections -->
-        <div class="accomodations-flex-container">
+        <div class="accomodations-flex-container" >
             <!-- Section of most popular accomodations in Marseille -->
-            <section class="popular">
-                <h2 class="flex-container-around">
+            <section class="popular" tabindex="0" aria-labelledby="popular">
+                <h2 class="flex-container-around" id="popular">
                     <span>Most Popular</span>
                     <i class="fas fa-chart-line"></i>
                 </h2>
                 <div class="article-container space-top">
-                    <article>
-                        <img src="./images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="sweet hotel room by emile-guillemot on unsplash" class="popular-img-height-hotfix">
+                    <article tabindex="0">
+                        <img src="./images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="sweet hotel room of morning sun hotel by emile-guillemot on unsplash" class="popular-img-height-hotfix" />
                         <div>
                             <h3>Morning Sun hotel</h3>
                             <p><span>starting at</span> <b>€128</b></p>
-                            <p class="space-top">
+                            <p class="space-top" aria-label="5 stars hotel">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -105,12 +120,12 @@
                             </p>
                         </div>
                     </article>
-                    <article>
-                        <img src="./images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="sweet hotel room by aw-creative on unsplash" class="popular-img-height-hotfix"/>
+                    <article tabindex="0">
+                        <img src="./images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="sweet hotel room of au coeur de l'eau by aw-creative on unsplash" class="popular-img-height-hotfix"/>
                         <div>
                             <h3>Au Coeur de l'eau Bed and Breakfast</h3>
                             <p><span>Night starting at</span> <b>€71</b></p>
-                            <p class="space-top">
+                            <p class="space-top" aria-label="4 stars hotel">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -119,12 +134,12 @@
                             </p>
                         </div>
                     </article>
-                    <article>
-                        <img src="./images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="popular-img-height-hotfix" />
+                    <article tabindex="0">
+                        <img src="./images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="sweet hotel room of tout bleu et blanch hotel by febrian-zakaria on unsplash" class="popular-img-height-hotfix" />
                         <div>
                             <h3>Tout Bleu et Blanc hotel</h3>
                             <p><span>Night starting at</span> <b>€68</b></p>
-                            <p class="space-top">
+                            <p class="space-top" aria-label="4 stars hotel">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -136,11 +151,11 @@
                 </div>
             </section>
             <!-- Section of accomodations in Marseille -->
-            <section class="accomodations">
-                <h2 id="accomodations">Accomodations in Marseille</h2>
+            <section class="accomodations" tabindex="0" aria-labelledby="accomodations">
+                <h2 id="accomodations"><a href="#">Accomodations in Marseille</a></h2>
                 <div class="accomodations-container space-top">
                     <article>
-                        <img src="./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                        <img src="./images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Pretty hotel room of auberge la cannebière by marcus-loke on unsplash" class="accomodation-img-height-hotfix" />
                         <div>
                             <h3>Auberge la Cannebière</h3>
                             <p>Night starting at <b>€25</b></p>
@@ -154,7 +169,7 @@
                         </div>
                     </article>
                     <article>
-                        <img src="./images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                        <img src="./images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Pretty hotel room of hôtel du port by fred-kleber on unsplash" class="accomodation-img-height-hotfix" />
                         <div>
                             <h3>Hôtel du port</h3>
                             <p>Night starting at <b>€52</b></p>
@@ -168,7 +183,7 @@
                         </div>
                     </article>
                     <article>
-                        <img src="./images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                        <img src="./images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Nice hotel room of les mouettes hotel by reisetopia on unsplash" class="accomodation-img-height-hotfix" />
                         <div>
                             <h3>Les mouettes Hotel</h3>
                             <p>Night starting at <b>€76</b></p>
@@ -182,7 +197,7 @@
                         </div>
                     </article>
                     <article>
-                        <img src="./images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                        <img src="./images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Great hotel room of hôtel de la mer by annie-spratt on unsplash" class="accomodation-img-height-hotfix" />
                         <div>
                             <h3>Hôtel de la mer</h3>
                             <p>Night starting at <b>€46</b></p>
@@ -196,7 +211,7 @@
                         </div>
                     </article>
                     <article>
-                        <img src="./images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix" />
+                        <img src="./images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Pretty hotel room of Auberge le panier by nicate-leeon unsplash" class="accomodation-img-height-hotfix" />
                         <div>
                             <h3>Auberge Le Panier</h3>
                             <p>Night starting at <b>€23</b></p>
@@ -210,7 +225,7 @@
                         </div>
                     </article>
                     <article>
-                        <img src="./images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="sweet hotel room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix"/>
+                        <img src="./images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Pretty hotel in Hotel chez Amina room by febrian-zakaria on unsplash" class="accomodation-img-height-hotfix"/>
                         <div>
                             <h3>Hôtel chez Amina</h3>
                             <p>Night starting at <b>€96</b></p>
@@ -228,49 +243,49 @@
             </section>
         </div>
         <!-- Section of Activities in Marseille -->
-        <section class="activities">
-            <h2 id="activities">Activities in Marseille</h2>
+        <section class="activities" tabindex="0">
+            <h2 id="activities"><a href="#">Activities in Marseille</a></h2>
             <div class="activities-container">
                 <div class="activity-row">
-                    <div class="activity">
+                    <div class="activity" tabindex="0">
                         <img
                             src="./images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
-                            alt="The beautiful MDN logo.">
+                            alt="The beautiful picture of old port by reno laithienne on unsplash">
                         <p>Old Port</p>
                     </div>
                     <div class="activity-column" id="first-column">
-                        <div class="activity" id="pomegues">
+                        <div class="activity" id="pomegues" tabindex="0">
                             <img
                                 src="./images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
-                                alt="The beautiful MDN logo." class="">
+                                alt="The beautiful picture of fort of pomegue by Paul Hermann on unsplash" class="">
                             <p>Pomègues Fort</p>
                         </div>
-                        <div class="activity" id="frioul">
+                        <div class="activity" id="frioul" tabindex="0">
                             <img
                                 src="./images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
-                                alt="The beautiful MDN logo.">
+                                alt="The beautiful picture of frioul island by kevin hikari on unsplash">
                             <p>Frioul Island</p>
                         </div>
                     </div>
                 </div>
                 <div class="activity-row" id="second-row">
-                    <div class="activity">
+                    <div class="activity" tabindex="0">
                         <img
                             src="./images/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
-                            alt="The beautiful MDN logo.">
+                            alt="The beautiful picture of calanque nationa park by kilyan sockalingum on unsplash">
                         <p>Calanques National Park</p>
                     </div>
                     <div class="activity-column">
-                        <div class="activity">
+                        <div class="activity" tabindex="0">
                             <img
                                 src="./images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                                alt="The beautiful MDN logo.">
+                                alt="The beautiful picture of notre-dame-de-la-garde by florian wehde on unsplash.">
                             <p>Notre-Dame-de-la-Garde</p>
                         </div>
-                        <div class="activity">
+                        <div class="activity" tabindex="0">
                             <img
                                 src="./images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
-                                alt="The beautiful MDN logo.">
+                                alt="The beautiful picture of longchamp parc by lena paulin on unsplash">
                             <p>Longchamp Park</p>
                         </div>
                     </div>
@@ -278,22 +293,22 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer tabindex="0">
         <div>
             <h3>About</h3>
-            <p>Site Map</p>
-            <p>General Terms and Conditions</p>
-            <p>Data and Privacy</p>
+            <p><a href="#">Site Map</a></p>
+            <p><a href="#">General Terms and Conditions</a></p>
+            <p><a href="#">Data and Privacy</a></p>
         </div>
         <div>
-            <h3>Our Accomodations</h3>
-            <p>Quality Assessment</p>
-            <p>You have a hotel?</p>
+            <h3><a href="#">Our Accomodations</a></h3>
+            <p><a href="#">Quality Assessment</a></p>
+            <p><a href="#">You have a hotel?</a></p>
         </div>
         <div>
-            <h3>Assistance</h3>
-            <p>Help Desk</p>
-            <p>Contact Us</p>
+            <h3><a href="#">Assistance</a></h3>
+            <p><a href="#">Help Desk</a></p>
+            <p><a href="#">Contact Us</a></p>
         </div>
     </footer>
 </body>
