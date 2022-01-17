@@ -37,11 +37,7 @@
             span {
 
                 //border-color: $site-blue;
-                //animation: borderFill 2s 1 ease-in-out;
-                animation-duration: 2s;
-                animation-name: borderFill;
-                animation-iteration-count: 1;
-                animation-direction: alternate;
+                animation: borderFill 2s 1 ease-in-out;
             }
 
         }

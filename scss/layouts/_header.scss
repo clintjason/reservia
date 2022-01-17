@@ -36,9 +36,10 @@ header {
           }
         > a:last-child {
             position: absolute;
-            top: 16px;
+            top: 19px;
             right: 20px;
             color: $site-blue;
+            transition: all 400ms;
 
             &:hover {
                 background-color: $site-blue;
@@ -86,8 +87,9 @@ header {
                     padding-bottom: unset;
                     width: 25%;
                     padding-top: 16px;
-                    transition: border-top 0.2s, color 0.2s; 
+                    transition: border-top 400ms, color 400ms; 
                     transition-timing-function: linear;
+                    
 
                     &:visited, &:hover, &:active, &:focus {
                         border-top: 3px solid $site-blue;
@@ -109,11 +111,10 @@ header {
         }
     }
 
-    @media all and (min-width: $small) {
+    @media all and (min-width: $medium) {
         nav {
             ul {
                 width: 40%;
-                
             }
         }
     }
