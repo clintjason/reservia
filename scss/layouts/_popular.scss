@@ -30,6 +30,9 @@
                 color: $site-blue;
             }
         }
+        &:hover {
+            @include addShadow;
+        }
     }
 
     @media all and (max-width: 305px) {

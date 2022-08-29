@@ -20,6 +20,9 @@
                     color: $site-blue;
                 }
             }
+            &:hover {
+                @include addShadow;
+            }
         }
     }
 

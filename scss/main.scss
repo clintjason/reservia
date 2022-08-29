@@ -1,12 +1,24 @@
+// Utils Files
 @import 'utils/variables';
-@import 'base/base';
 @import 'utils/commons';
+@import 'utils/keyframes';
+@import 'utils/mixins';
+
+// Base Files
+@import 'base/base';
 @import 'base/typography';
+
+
+// Component Files
+@import 'components/search';
+@import 'components/filter';
+
+
+// Layout Files
+
 @import 'layouts/footer';
 @import 'layouts/header';
 @import 'layouts/search';
-@import 'components/search';
-@import 'components/filter';
 @import 'layouts/popular';
 @import 'layouts/accomodation';
 @import 'layouts/activities';

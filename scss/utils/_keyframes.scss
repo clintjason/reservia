@@ -1,0 +1,35 @@
+@keyframes rotation {
+    from {
+        rotate: -360deg;
+    }
+    to {
+        rotate: 0deg;
+    }
+}
+
+@keyframes borderFill {
+    0% {
+        border-top-color: $site-blue;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    25% {
+        border-top-color: $site-blue;
+        border-right-color: $site-blue;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50% {
+        border-top-color: $site-blue;
+        border-right-color: $site-blue;
+        border-bottom-color: $site-blue;
+        border-left-color: transparent;
+    }
+    100% {
+        border-top-color: $site-blue;
+        border-right-color: $site-blue;
+        border-bottom-color: $site-blue;
+        border-left-color: $site-blue;
+    }
+}
