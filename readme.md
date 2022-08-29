@@ -15,8 +15,8 @@ Acessibility Principles
 Mobile First Development
 
 This mock-up for desktop
-![The Desktop mockup](https://github.com/clintjason/reservia/blob/master/images/Desktop-1?raw=true)
+![The Desktop mockup](https://github.com/clintjason/reservia/blob/master/images/Desktop-1.png?raw=true)
 
 This Mock-Up for Phone
-![The Phone mockup](https://github.com/clintjason/reservia/blob/master/images/iPhone8-1..png?raw=true))
+![The Phone mockup](https://github.com/clintjason/reservia/blob/master/images/iPhone8-1.png?raw=true))
 
