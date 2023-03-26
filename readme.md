@@ -19,4 +19,3 @@ This mock-up for desktop
 
 This Mock-Up for Phone
 ![The Phone mockup](https://github.com/clintjason/reservia/blob/master/images/iPhone8-1.png?raw=true))
-
